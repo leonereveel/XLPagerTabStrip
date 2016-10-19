@@ -110,6 +110,7 @@ public class ButtonBarView: UICollectionView {
     }
     
     public func updateSelectedBarPosition(animated: Bool, swipeDirection: SwipeDirection, pagerScroll: PagerScroll) -> Void {
+        selectedBar.frame.origin.y = self.frame.size.height - CGFloat(self.selectedBarHeight)
         var selectedBarFrame = selectedBar.frame
         
         let selectedCellIndexPath = NSIndexPath(forItem: selectedIndex, inSection: 0)
